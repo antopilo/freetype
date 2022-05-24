@@ -102,10 +102,10 @@ cmake_minimum_required(VERSION 2.8.12)
 if (NOT CMAKE_VERSION VERSION_LESS 3.3)
   # Allow symbol visibility settings also on static libraries. CMake < 3.3
   # only sets the property on a shared library build.
-  cmake_policy(SET CMP0063 NEW)
+
 
   # Support new IN_LIST if() operator.
-  cmake_policy(SET CMP0057 NEW)
+
 endif ()
 
 include(CheckIncludeFile)
@@ -144,7 +144,6 @@ else ()
     message(FATAL_ERROR "IOS_PLATFORM is not supported on this platform")
   endif ()
 endif ()
-
 
 project(freetype C)
 
